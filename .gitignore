@@ -1,41 +1,71 @@
-# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
-
-# dependencies
+# ─── Dependencies ────────────────────────────────────────────────────────────
 node_modules/
 
-# Expo
+# ─── Expo ────────────────────────────────────────────────────────────────────
 .expo/
 dist/
 web-build/
 expo-env.d.ts
 
-# Native
+# ─── Native build output ─────────────────────────────────────────────────────
+/ios/
+/android/
 .kotlin/
-*.orig.*
+
+# ─── Firebase / Google secrets ───────────────────────────────────────────────
+# NOTE: google-services.json is required for EAS Build.
+# If your repo is PUBLIC, use EAS Secrets instead and add it back to .gitignore.
+firebase.json
+.firebaserc
+serviceAccountKey.json
+firestore.rules
+firestore.indexes.json
+
+# ─── Environment variables ────────────────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+.env.development
+.env.production
+.env.staging
+
+# ─── Certificates & signing ──────────────────────────────────────────────────
 *.jks
 *.p8
 *.p12
 *.key
 *.mobileprovision
+*.pem
+*.cert
+*.keystore
 
-# Metro
+# ─── Metro bundler ───────────────────────────────────────────────────────────
 .metro-health-check*
 
-# debug
+# ─── Debug / log files ───────────────────────────────────────────────────────
 npm-debug.*
 yarn-debug.*
 yarn-error.*
+*.log
 
-# macOS
+# ─── OS generated ────────────────────────────────────────────────────────────
 .DS_Store
-*.pem
+.DS_Store?
+._*
+Thumbs.db
+desktop.ini
 
-# local env files
-.env*.local
-
-# typescript
+# ─── TypeScript ──────────────────────────────────────────────────────────────
 *.tsbuildinfo
 
-# generated native folders
-/ios
-/android
+# ─── Editor ──────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ─── Misc ────────────────────────────────────────────────────────────────────
+*.orig.*
+coverage/
+.cache/
+google-services.json

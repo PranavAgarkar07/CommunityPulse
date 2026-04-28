@@ -1,8 +1,9 @@
 {
   "expo": {
-    "name": "NexCoder",
+    "name": "CommunityPulse",
     "slug": "NexCoder",
     "version": "1.0.0",
+    "scheme": "communitypulse",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -10,20 +11,31 @@
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#EEF5EF"
     },
     "ios": {
       "supportsTablet": true
     },
     "android": {
+      "package": "com.nexcoder.app",
+      "googleServicesFile": "./google-services.json",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#EEF5EF"
       },
       "edgeToEdgeEnabled": true
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-font",
+      "expo-web-browser"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "6bb20dc0-e925-4faf-ac5d-1c8d5f9ea232"
+      }
     }
   }
 }
